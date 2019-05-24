@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Form</h1>
+    <form action="#" th:action="@{/booking}" th:object="${BookingData}" method="post">
+    	<p>bookingId: <input type="text" th:field="*{bookingId}" /></p>
+        <p>First Name: <input type="text" th:field="*{firstName}" /></p>
+        <p>Surname: <input type="text" th:field="*{surname}" /></p>
+        <p>Comment: <input type="text" th:field="*{comment}" /></p>
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    </form>
+</body>
+</html>
