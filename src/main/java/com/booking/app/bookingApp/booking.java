@@ -17,8 +17,8 @@ class BookingData{
     int bookingID;
     String firstName;
     String surname;
-   /*Calendar startDate;
-    Calendar endDate;*/
+    String startDate;
+    String endDate;
     String comment;
 
     /**
@@ -49,23 +49,23 @@ class BookingData{
         this.surname = surname;
     }
     
-    /*
-       public Calendar getStartDate() {
+    
+       public String getStartDate() {
         return startDate;
     }
 
 
-    public void setStartDate(Calendar startDate) {
+    public void setStartDate(String startDate) {
         this.startDate = startDate;
     }
 
-    public Calendar getEndDate() {
+    public String getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(Calendar endDate) {
+    public void setEndDate(String endDate) {
         this.endDate = endDate;
-    }*/
+    }
 
     /**
      * @return the comment
@@ -97,12 +97,13 @@ class BookingData{
         this.bookingID = bookingID;
     }
     
-    public BookingData( int bookingId, String firstName, String surname, String comment){
+    public BookingData( int bookingId, String firstName, String surname, String comment, 
+                        String startDate, String endDate){
         this.bookingID = bookingId; 
         this.firstName = firstName;
         this.surname = surname;
-        /*this.startDate = startDate;  Calendar startDate, Calendar endDate, 
-        this.endDate = endDate;*/
+        this.startDate = startDate;  //Calendar startDate, Calendar endDate, 
+        this.endDate = endDate;
         this.comment = comment; 
     
     }

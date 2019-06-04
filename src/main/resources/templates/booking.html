@@ -21,31 +21,32 @@
         </ul>
  </nav>
     <div class="container w3-margin" style="background-color: teal">
-        <form class="container w3-padding-16" style="background-color:beige" action="/registration" method="POST"  > 
+        <form class="container w3-padding-16" style="background-color:beige" action="#" th:action="@{/register}" th:object="${bData}" method="POST"   > 
 
             <div class="form-group">
                 <label for="First Name">Booking Id:</label>
-                <input type="text" class="form-control w3-input w3-border w3-round" id="bookingId" style="width:40%">
+                <input type="text" class="form-control w3-input w3-border w3-round" th:field="*{bookingID}" style="width:40%">
             </div>
 
             <div class="form-group">
                 <label for="First Name">First Name:</label>
-                <input type="text" class="form-control w3-input w3-border w3-round" id="firstName" style="width:40%">
+                <input type="text" class="form-control w3-input w3-border w3-round" id="firstName" th:field="*{firstName}" style="width:40%">
             </div>
             <div class="form-group">
                     <label for="First Name">Surname</label>
-                    <input type="text" class="form-control w3-input w3-border w3-round" id="surname" style="width:40%">
+                    <input type="text" class="form-control w3-input w3-border w3-round" id="surname" th:field="*{surname}" style="width:40%">
             </div>
-           <!-- <div class="form-group">
+
+            <div class="form-group">
                     <label for="First Name">Start Date and Time:</label>
-                    <input type="datetime-local" class="form-control w3-input w3-border w3-round" id="startDate" style="width:30%">
+                    <input type="datetime-local" class="form-control w3-input w3-border w3-round" id="startDate" th:field="*{startDate}" style="width:30%">
                     <label for="First Name">End Date and Time:</label>
-                    <input type="datetime-local" class="form-control w3-input w3-border w3-round" id="endDate" style="width:30%">
-             </div> -->  
+                    <input type="datetime-local" class="form-control w3-input w3-border w3-round" id="endDate" th:field="*{endDate}" style="width:30%">
+             </div> 
 
              <div class="form-group">
                 <label for="comment">Leave Comment:</label>
-                <textarea rows="9" cols="50" class="form-control w3-input w3-border w3-round" id="comment" style="width:40%">
+                <textarea rows="9" cols="50" class="form-control w3-input w3-border w3-round" id="comment" th:field="*{comment}" style="width:40%">
                 </textarea>   
             </div>
             <button type="submit" class="btn btn-primary" style="background-color: teal">Submit Request</button>

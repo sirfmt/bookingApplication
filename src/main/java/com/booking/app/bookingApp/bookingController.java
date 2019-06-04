@@ -23,9 +23,10 @@ class booking{
      return bookingInstance.getAllRecords();
     }
       
-@RequestMapping(method=RequestMethod.POST, value="/register", consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
+@RequestMapping(method=RequestMethod.POST, value="/register", consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE )
  public void addBooking( BookingData bookingObj){
      bookingInstance.addBooking(bookingObj);
+    
     }
 
 @RequestMapping(method=RequestMethod.PUT, value="bookings/edit/{bookingId}")
@@ -40,8 +41,8 @@ public void deleteBooking(@PathVariable int bookingId ){
     }  
 
 @RequestMapping(value="/welcome", method=RequestMethod.POST)
-public void welcomeUser(Integer bookingId, String firstName, String surname, String comment) {
-        BookingData obj = new BookingData(bookingId, firstName, surname, comment);
+public void welcomeUser(Integer bookingId, String firstName, String surname, String comment, String startDate, String endDate) {
+        BookingData obj = new BookingData(bookingId, firstName, surname, comment, startDate, endDate);
         bookingInstance.addBooking(obj);
 		return ;
 	}      
